@@ -1,0 +1,17 @@
+C:\Users\User\Documents\NASA_By_Janar\bin\Debug\net7.0-windows\NASA_By_Janar.exe
+C:\Users\User\Documents\NASA_By_Janar\bin\Debug\net7.0-windows\NASA_By_Janar.deps.json
+C:\Users\User\Documents\NASA_By_Janar\bin\Debug\net7.0-windows\NASA_By_Janar.runtimeconfig.json
+C:\Users\User\Documents\NASA_By_Janar\bin\Debug\net7.0-windows\NASA_By_Janar.dll
+C:\Users\User\Documents\NASA_By_Janar\bin\Debug\net7.0-windows\NASA_By_Janar.pdb
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\NASA_By_Janar.csproj.AssemblyReference.cache
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\NASA_By_Janar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\NASA_By_Janar.AssemblyInfoInputs.cache
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\NASA_By_Janar.AssemblyInfo.cs
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\NASA_By_Janar.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\NASA_By_Janar.dll
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\refint\NASA_By_Janar.dll
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\NASA_By_Janar.pdb
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\NASA_By_Janar.genruntimeconfig.cache
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\ref\NASA_By_Janar.dll
+C:\Users\User\Documents\NASA_By_Janar\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\User\Documents\NASA_By_Janar\obj\Debug\net7.0-windows\NASA_By_Janar.csproj.CopyComplete

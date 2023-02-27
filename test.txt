@@ -1,0 +1,99 @@
+Imagine que t'es un ingénieur en informatique et tu code depuis plus de 20 ans avec C# et la un élève à toi te demande refait ce code pour pas que ça soit identique mais faut que ça fonctionne correctement :
+using System;
+using System.Windows.Forms;
+using System.Net;
+using System.Drawing;
+using Newtonsoft.Json;
+
+namespace NASA_BY_JANAR
+{
+    public partial class Form1 : Form
+    {
+        private readonly string apiKey = "nwsFOLWrxqeIl0xofkX1kfqEpXhmx1SclEwkXCJd";
+        private readonly string apiUrl1 = "https://api.nasa.gov/planetary/apod?api_key=";
+        private readonly string apiUrl2 = "https://api.nasa.gov/EPIC/api/natural/images?api_key=";
+
+        public Form1()
+        {
+            InitializeComponent();
+            this.Load += Form1_Load;
+
+            var button1 = new Button
+            {
+                Text = "API 1"
+            };
+            button1.Click += (sender, args) => GetDataFromAPI(apiUrl1);
+
+            var button2 = new Button
+            {
+                Text = "API 2"
+            };
+            button2.Click += (sender, args) => GetDataFromAPI(apiUrl2);
+
+            Controls.Add(button1);
+            Controls.Add(button2);
+
+            pictureBox1.Visible = false;
+            label1.Visible = false;
+            backButton.Visible = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void GetDataFromAPI(string api)
+        {
+            GetData(api + apiKey);
+            pictureBox1.Visible = true;
+            label1.Visible = true;
+            backButton.Visible = true;
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            label1.Visible = false;
+            backButton.Visible = false;
+        }
+    }
+}
+
+
+    private async void GetDataFromAPI(string apiUrl)
+{
+    using (var client = new HttpClient())
+    {
+        try
+        {
+            var jsonData = await client.GetStringAsync(apiUrl);
+            dynamic json = JsonConvert.DeserializeObject(jsonData);
+            string imageUrl = json.url;
+            string date = json.date;
+            string title = json.title;
+            string explanation = json.explanation;
+            explanation = explanation.Replace(",", ",\n");
+
+            using (var imageClient = new HttpClient())
+            {
+                var imageBytes = await imageClient.GetByteArrayAsync(imageUrl);
+                using (var memoryStream = new MemoryStream(imageBytes))
+                {
+                    var image = Image.FromStream(memoryStream);
+                    pictureBox1.Image = image;
+                }
+            }
+
+            label1.Text = " Date : " + date + Environment.NewLine +
+                            Environment.NewLine + " Title : " + title + Environment.NewLine + Environment.NewLine +
+                            " explanation : " + Environment.NewLine + " " + explanation;
+        }
+        catch (WebException ex)
+        {
+            MessageBox.Show("Error: " + ex.Message);
+        }
+    }
+}
+
+}}
+```
